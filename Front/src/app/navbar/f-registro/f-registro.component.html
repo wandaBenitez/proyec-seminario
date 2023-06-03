@@ -1,0 +1,26 @@
+<ion-list>
+  <ion-item>
+    <h1><i>REGISTRO FACTURA</i></h1>
+  </ion-item>
+  
+  <ion-item>
+    <ion-select [(ngModel)]="Factura.producto" name="producto" aria-label="fruit" placeholder="Seleccionar Producto">
+      <ion-select-option *ngFor="let product of productos" value="{{product.categoria}} => {{product.descripcion}}; Talla: {{product.talla}}">{{product.categoria}} => {{product.descripcion}}; Talla: {{product.talla}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-input [(ngModel)]="Factura.cantidad" type="number" name="cantidad" label="Outline input" label-placement="floating" fill="outline" placeholder="Digite Cantidad"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="Factura.descuento" type="number" name="descuento" label="Outline input" label-placement="floating" fill="outline" placeholder="Digite Descuento"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="Factura.fecha" name="fecha" type="date" label="Outline input" label-placement="floating" fill="outline" placeholder="Digite Fecha"></ion-input>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-button (click)="registrar()">Registrar un Producto</ion-button>
+    <ion-button (click)="facturar()">Facturar</ion-button>
+  </ion-item>
+</ion-list>

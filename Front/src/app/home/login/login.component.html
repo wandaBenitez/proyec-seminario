@@ -1,0 +1,29 @@
+<ion-card>
+  <img alt="Silhouette of mountains" src="../assets/img/banner-login.jpg" />
+  <ion-card-header class="header-login">
+    <ion-card-title>Inicio de sesión</ion-card-title>
+    <ion-card-subtitle class="tamaño-letra">Inicia sesión con tu cuenta de Wcash</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <ion-item class="box-form">
+      <ion-label>
+        <ion-icon name="mail-outline"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="correo" name="correo" placeholder=" Email"></ion-input>
+    </ion-item>
+
+    <ion-item class="box-form">
+      <ion-label>
+        <ion-icon name="keypad-outline"></ion-icon>
+      </ion-label>
+      <ion-input [(ngModel)]="contrasena" name="contrasena" type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <section class="enlace-ingreso">
+      <ion-button (click)="Inicio()" expand="block" class="boton">Ingresar</ion-button>
+    </section>
+
+  </ion-card-content>
+</ion-card>
